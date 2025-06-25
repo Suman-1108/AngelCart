@@ -1,0 +1,419 @@
+/* Modern Dark Theme with Vibrant Accents */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --main-bg: #181c24;
+  --card-bg: #23283b;
+  --accent: #00c6ae;
+  --accent-hover: #00e6d0;
+  --danger: #ff4e6a;
+  --danger-hover: #ff7b98;
+  --warning: #ffb347;
+  --warning-hover: #ffd580;
+  --text-main: #f4f4f4;
+  --text-light: #b3b8c5;
+  --border: 2px solid #23283b;
+  --box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background: var(--accent);
+  color: var(--main-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--main-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--main-bg);
+  color: var(--text-main);
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--text-main);
+}
+
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3.5rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn,
+.delete-btn,
+.option-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: .7rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--main-bg);
+  cursor: pointer;
+  text-align: center;
+  background: var(--accent);
+  box-shadow: var(--box-shadow);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  color: var(--main-bg);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.option-btn {
+  background: var(--warning);
+  color: var(--main-bg);
+}
+.option-btn:hover {
+  background: var(--warning-hover);
+  color: var(--main-bg);
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: var(--main-bg);
+}
+.delete-btn:hover {
+  background: var(--danger-hover);
+  color: var(--main-bg);
+}
+
+.flex-btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.message {
+  position: sticky;
+  top: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  z-index: 1100;
+  border-radius: .7rem;
+  box-shadow: var(--box-shadow);
+}
+
+.message span {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.message i {
+  cursor: pointer;
+  color: var(--danger);
+  font-size: 2.5rem;
+  transition: color 0.2s;
+}
+.message i:hover {
+  color: var(--accent);
+}
+
+.empty {
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: var(--danger);
+  border-radius: .7rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container form {
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  background: var(--card-bg);
+  border-radius: .7rem;
+  width: 50rem;
+  border: var(--border);
+}
+
+.form-container form h3 {
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.form-container form p {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.form-container form p span {
+  color: var(--warning);
+}
+
+.form-container form .box {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: .5rem;
+  background: var(--main-bg);
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: var(--text-main);
+  border: 1px solid var(--accent);
+}
+
+.header {
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  background: var(--card-bg);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header .flex .logo {
+  font-size: 2.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.header .flex .logo span {
+  color: var(--warning);
+}
+
+.header .flex .navbar a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+.header .flex .navbar a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.header .flex .icons div {
+  margin-left: 1.7rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+.header .flex .icons div:hover {
+  color: var(--accent);
+}
+
+.header .flex .profile {
+  position: absolute;
+  top: 120%; right: 2rem;
+  background: var(--card-bg);
+  border-radius: .7rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  padding: 2rem;
+  width: 30rem;
+  padding-top: 1.2rem;
+  display: none;
+  animation: fadeIn .2s linear;
+}
+
+.header .flex .profile.active {
+  display: inline-block;
+}
+
+.header .flex .profile p {
+  text-align: center;
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.dashboard .box-container,
+.show-products .box-container,
+.orders .box-container,
+.accounts .box-container,
+.contacts .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dashboard .box-container .box,
+.show-products .box-container .box,
+.orders .box-container .box,
+.accounts .box-container .box,
+.contacts .box-container .box {
+  padding: 2rem;
+  text-align: center;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: .7rem;
+  background: var(--card-bg);
+  color: var(--text-main);
+}
+
+.dashboard .box-container .box h3,
+.show-products .box-container .box .name,
+.orders .box-container .box p span,
+.accounts .box-container .box p span,
+.contacts .box-container .box p span {
+  color: var(--accent);
+}
+
+.dashboard .box-container .box p,
+.show-products .box-container .box .details,
+.orders .box-container .box p,
+.accounts .box-container .box p,
+.contacts .box-container .box p {
+  color: var(--text-light);
+}
+
+.show-products .box-container .box img,
+.update-product form .image-container .main-image img {
+  width: 100%;
+  height: 20rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  border-radius: .7rem;
+  background: var(--main-bg);
+}
+
+.show-products .box-container .box .price {
+  font-size: 2rem;
+  color: var(--warning);
+  margin: .5rem 0;
+}
+
+.update-product form,
+.add-products form {
+  background: var(--card-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: .7rem;
+  border: var(--border);
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.update-product form .box,
+.add-products form .box {
+  width: 100%;
+  border-radius: .5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: var(--text-main);
+  background: var(--main-bg);
+  margin: 1rem 0;
+  border: 1px solid var(--accent);
+}
+
+.update-product form span,
+.add-products form span {
+  font-size: 1.7rem;
+  color: var(--warning);
+}
+
+.update-product form textarea,
+.add-products form textarea {
+  height: 15rem;
+  resize: none;
+  background: var(--main-bg);
+  color: var(--text-main);
+  border: 1px solid var(--accent);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+@keyframes fadeIn {
+  0% { transform: translateY(1rem); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width:991px) {
+  html { font-size: 55%; }
+}
+
+@media (max-width:768px) {
+  #menu-btn { display: inline-block; }
+  .header .flex .navbar {
+    position: absolute;
+    top: 99%; left: 0; right: 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    background: var(--card-bg);
+    transition: .2s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .flex .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .flex .navbar a {
+    display: block;
+    margin: 2rem;
+  }
+}
+
+@media (max-width:450px) {
+  html { font-size: 50%; }
+  .heading { font-size: 3.5rem; }
+  .flex-btn { flex-flow: column; gap: 0; }
+  .show-products .box-container,
+  .orders .box-container,
+  .accounts .box-container,
+  .contacts .box-container {
+    grid-template-columns: 1fr;
+  }
+}
