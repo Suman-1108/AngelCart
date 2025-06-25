@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add to Cart</title>
+</head>
+<body style="padding: 30px; font-family: Arial;">
+
+  <h2>🛒 Add to Cart API Test</h2>
+
+  <label>User ID:</label><br>
+  <input type="number" id="user_id"><br><br>
+
+  <label>Product ID:</label><br>
+  <input type="number" id="product_id"><br><br>
+
+  <label>Quantity:</label><br>
+  <input type="number" id="quantity"><br><br>
+
+  <button onclick="addToCart()">Add to Cart</button>
+
+  <p id="result" style="margin-top: 20px; color: green;"></p>
+
+  <script>
+    function addToCart() {
+      const user_id = document.getElementById("user_id").value;
+      const product_id = document.getElementById("product_id").value;
+      const quantity = document.getElementById("quantity").value;
+
+      fetch("http://localhost/projectdone/api/add_to_cart.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          user_id: user_id,
+          product_id: product_id,
+          quantity: quantity
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        const result = document.getElementById("result");
+        result.innerText = data.message || data.error;
+        result.style.color = data.success ? "green" : "red";
+      })
+      .catch(err => {
+        document.getElementById("result").innerText = "Error: " + err;
+      });
+    }
+  </script>
+
+</body>
+</html>

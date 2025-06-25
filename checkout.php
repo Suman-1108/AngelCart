@@ -58,7 +58,7 @@ if(isset($_POST['order'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style1.css">
+   <link rel="stylesheet" href="css/mainstyle.css">
 
 </head>
 <body>
@@ -99,7 +99,7 @@ if(isset($_POST['order'])){
 
       <div class="flex">
          <div class="inputBox">
-            <span>Tapaiko subh nam :</span>
+            <span>name :</span>
             <input type="text" name="name" placeholder="enter your name" class="box" maxlength="20" required>
          </div>
          <div class="inputBox">
@@ -115,8 +115,8 @@ if(isset($_POST['order'])){
             <select name="method" class="box" required>
                <option value="cash on delivery">Cash On Delivery</option>
                <option value="credit card">Credit Card</option>
-               <option value="paytm">eSewa</option>
-               <option value="paypal">Khalti</option>
+               <option value="paytm">paytm</option>
+               <option value="paypal">paypal</option>
             </select>
          </div>
          <div class="inputBox">
@@ -129,15 +129,15 @@ if(isset($_POST['order'])){
          </div>
          <div class="inputBox">
             <span>City :</span>
-            <input type="text" name="city" placeholder="Kathmandu" class="box" maxlength="50" required>
+            <input type="text" name="city" placeholder="kovilpatti" class="box" maxlength="50" required>
          </div>
-         <div class="inputBox">
+         <!-- <div class="inputBox">
             <span>Province:</span>
             <input type="text" name="state" placeholder="Bagmati" class="box" maxlength="50" required>
-         </div>
+         </div> -->
          <div class="inputBox">
             <span>Country :</span>
-            <input type="text" name="country" placeholder="Nepal" class="box" maxlength="50" required>
+            <input type="text" name="country" placeholder="tamilnadu" class="box" maxlength="50" required>
          </div>
          <div class="inputBox">
             <span>ZIP CODE :</span>
@@ -150,18 +150,6 @@ if(isset($_POST['order'])){
    </form>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php include 'components/footer.php'; ?>
 

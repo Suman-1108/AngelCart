@@ -251,7 +251,7 @@ section{
 }
 
 .home-bg{
-   background:url(../images/home-bg.png) no-repeat;
+   background:url(../images/red_pixels_background.jpg) no-repeat;
    background-size: cover;
    background-position: center;
 }
@@ -335,7 +335,7 @@ section{
 }
 
 .category .slide{
-   margin-bottom: 5rem;
+   margin: 3rem;
    box-shadow: var(--box-shadow);
    border:var(--border);
    text-align: center;

@@ -24,7 +24,6 @@ if(isset($_GET['delete'])){
    $delete_wishlist->execute([$delete_id]);
    header('location:users_accounts.php');
 }
-
 ?>
 
 <!DOCTYPE html>
